@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
-from typing import List
 """Doc module"""
+from typing import List
+"""Import of all modules"""
 
 
 def sum_list(input_list: List[float]) -> float:
