@@ -11,7 +11,7 @@ def canUnlockAll(boxes):
     visited = [False] * n
     visited[0] = True
 
-    queue = [0]  # Start with the first box
+    queue = [0]
 
     while queue:
         current_box = queue.pop(0)
