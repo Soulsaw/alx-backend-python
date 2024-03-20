@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Module doc"""
 import time
-""""Import module"""
 import asyncio
+""""Import module"""
 async_comprehension = __import__('1-async_comprehension').async_comprehension
 
 
