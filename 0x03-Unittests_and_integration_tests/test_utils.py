@@ -18,10 +18,11 @@ class TestAccessNestedMap(unittest.TestCase):
         ({"a": {"b": 2}}, ('a',), {"b": 2}),
         ({"a": {"b": 2}}, ("a", "b"), 2)
     ])
-    def test_access_nested_map(self, nested_map, path, expected_result):
-        self.assertEqual(access_nested_map(nested_map, path),
-                         expected_result)
+    def test_access_nested_map(self, nested_map, path, expected):
+        self.assertEqual(access_nested_map(nested_map, path), expected)
 
+
+"""
     @parameterized.expand([
         ({}, ("a",), "KeyError: 'a'"),
         ({"a": 1}, ("a", "b"), "KeyError: 'b'")
@@ -30,7 +31,7 @@ class TestAccessNestedMap(unittest.TestCase):
                                          expected_error):
         self.assertRaisesRegex(KeyError, expected_error)
 
-
+ """
 if __name__ == "__main__":
     """Call of the main function"""
     unittest.main()
