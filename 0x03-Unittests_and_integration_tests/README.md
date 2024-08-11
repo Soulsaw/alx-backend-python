@@ -1,2 +1,3 @@
 # 0x03. Unittests and Integration Tests
-## Parameterize the unittest
+## 1. Parameterize a unit test
+## 2. Mock HTTP calls 
