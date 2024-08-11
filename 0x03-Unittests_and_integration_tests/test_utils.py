@@ -20,6 +20,7 @@ class TestAccessNestedMap(unittest.TestCase):
         ({"a": {"b": 2}}, ("a", "b"), 2)
     ])
     def test_access_nested_map(self, nested_map, path, expected):
+        """Doc of this function"""
         self.assertEqual(access_nested_map(nested_map, path), expected)
 
     @parameterized.expand([
@@ -27,6 +28,7 @@ class TestAccessNestedMap(unittest.TestCase):
         ({"a": 1}, ("a", "b"))
     ])
     def test_access_nested_map_exception(self, nested_map, path):
+        """Doc of this function"""
         with self.assertRaises(KeyError) as cmd:
             access_nested_map(nested_map, path)
         self.assertEqual(str(cmd.exception), str(KeyError(path[-1])))
@@ -40,6 +42,7 @@ class TestGetJson(unittest.TestCase):
     ])
     @patch('requests.get')
     def test_get_json(self, test_url, test_payload, mock_get):
+        """Doc of this function"""
         mock_response = Mock()
         mock_response.json.return_value = test_payload
         mock_get.return_value = mock_response
@@ -52,6 +55,7 @@ class TestMemoize(unittest.TestCase):
     """Doc the test memoize definition"""
     def test_memoize(self):
         class TestClass:
+            """Doc of this function"""
             def a_method(self):
                 return 42
 
